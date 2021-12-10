@@ -1,8 +1,11 @@
-.main-nav {}
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: "Google Sans", Arial, sans-serif;
     color: #3c4043;
+    margin: 0;
 }
 
 .nav-title {
@@ -122,4 +125,13 @@ ul li a:target {
     background-color: transparent;
     box-shadow: 0 1px 4px 0 rgb(5 5 5 / 15%);
     border-radius: 40px;
+}
+
+.video-container {
+    margin-top: 68px;
+    box-sizing: border-box;
+}
+
+#video1 {
+    width: 100%;
 }
