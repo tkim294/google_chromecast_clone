@@ -1,11 +1,11 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 body {
     font-family: "Google Sans", Arial, sans-serif;
     color: #3c4043;
-    margin: 0;
 }
 
 .nav-title {
