@@ -1,0 +1,84 @@
+.main-nav {
+}
+
+body {
+  font-family: "Google Sans", Arial, sans-serif;
+  color: #3c4043;
+}
+
+.nav-title {
+  font-size: 24px;
+  color: #423f3f;
+  margin: 0;
+  font-family: "Google Sans", Arial, sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  margin: auto 0;
+}
+
+.main-menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  font-size: 14px;
+  margin: auto 8px;
+  height: 100%;
+}
+
+.main-menu li a {
+  padding: 10px;
+  text-decoration: none;
+  color: #423f3f;
+}
+
+.right-menu {
+  display: flex;
+  flex-direction: row;
+  margin: auto 0;
+}
+
+.price-ship-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: right;
+  color: #3c4043;
+  margin: auto 0;
+}
+
+.ship-text {
+  color: #636060;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.button-div {
+  margin: 5px 0;
+  padding-left: 8px;
+  border: none;
+}
+
+.button {
+  font-size: 22px;
+  padding: 0 45px;
+  background-color: #1a73e8;
+  color: #fff;
+  height: 56px;
+  white-space: nowrap;
+  min-width: 76px;
+  width: fit-content;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+}
