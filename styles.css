@@ -128,10 +128,21 @@ ul li a:target {
 }
 
 .video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    overflow: hidden;
     margin-top: 68px;
-    box-sizing: border-box;
 }
 
 #video1 {
+    box-sizing: border-box;
+    background-position: center center;
+    background-size: cover;
     width: 100%;
 }
+
+#video2 {}
