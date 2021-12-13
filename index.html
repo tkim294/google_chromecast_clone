@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="myscripts.js"></script>
+    <script src="jquery-3.6.0.js"></script>
     <title>Chromecast Clone</title>
 </head>
 
@@ -40,11 +40,20 @@
 
     <!-- Main Body -->
     <div class="video-container">
-        <video id="video1" autoplay muted> <!-- add muted for autoplay started -->
+        <video class="video" id="video1" autoplay muted> <!-- add muted for autoplay started -->
             <source src="https://storage.googleapis.com/mannequin/blobs/9357a34e-dfe1-4e97-b57a-aa17013a2902.mp4" type="video/mp4" >
+            Your browser does not support the video tag.
+        </video>
+        <video class="video" id="myVideo" autoplay muted> <!-- add muted for autoplay started -->
+            Your browser does not support the video tag.
         </video>
     </div>
 
+    <div class="">
+
+    </div>
+
 </body>
+<script src="myjavascript.js"></script>
 
 </html>

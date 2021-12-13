@@ -138,11 +138,14 @@ ul li a:target {
     margin-top: 68px;
 }
 
-#video1 {
+.video {
     box-sizing: border-box;
     background-position: center center;
     background-size: cover;
     width: 100%;
+    height: 100%;
 }
 
-#video2 {}
+#myVideo {
+    margin: 24px 0;
+}
