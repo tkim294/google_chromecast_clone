@@ -47,3 +47,28 @@ function ensureVideoPlays() {
         });
     }
 }
+
+// Image change timer management
+var image = document.getElementById('main-image');
+var imageArray = [
+    'https://lh3.googleusercontent.com/UBUETCc8EVM-7oW51JEU5xMEHtrQLXOfHO7copH2Hshg0KNCONshfc2yIMwCSHmU-J9lt7l8pblDC7NhtLp9Lhubv1wSHg4_lZL5=rw-w1230',
+    'https://lh3.googleusercontent.com/OYo1qxZwLVn155V6NLcbq69iUGabvSgP5YyyBEkwEvZYw70ZYN7pbt5Lx3rS7uWGP0URFVuWa2boSdjHL1sBD_Z3n5bVoiVOg3s=rw-w1230',
+    'https://lh3.googleusercontent.com/g0yZeeumvKhaxed-Uw6EMkGQnQs38766KNty4BSX6KVAdm9yFwSAAaITaHCpDJUcGFT_NVdPAJ6BlGs9CwErT1pQZLBV37EBFQ=rw-w1230'
+];
+var imageIndex = 0;
+
+function changeImage() {
+    image.setAttribute("src", imageArray[imageIndex]);
+    imageIndex++;
+    if (imageIndex > imageArray.length - 1) {
+        imageIndex = 0;
+    }
+}
+
+setInterval(changeImage, 5000);
+
+// text hovering effect on the image
+var controller = new ScrollMagic.Controller();
+
+// text click changes image
+function openImg(index) {}
