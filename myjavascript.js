@@ -1,3 +1,11 @@
+// nav menu active 
+var menuItems = $(".main-menu a");
+$(".main-menu a").on('click', function(event) {
+    event.preventDefault();
+    menuItems.removeClass('active');
+    $(this).addClass('active');
+});
+
 // Video autoplay management
 var videoSource = new Array();
 videoSource[0] = ' https://storage.googleapis.com/mannequin/blobs/a4c70e88-2049-4a05-911e-3d293c3c22ed.mp4';
@@ -51,24 +59,59 @@ function ensureVideoPlays() {
 // Image change timer management
 var image = document.getElementById('main-image');
 var imageArray = [
-    'https://lh3.googleusercontent.com/UBUETCc8EVM-7oW51JEU5xMEHtrQLXOfHO7copH2Hshg0KNCONshfc2yIMwCSHmU-J9lt7l8pblDC7NhtLp9Lhubv1wSHg4_lZL5=rw-w1230',
     'https://lh3.googleusercontent.com/OYo1qxZwLVn155V6NLcbq69iUGabvSgP5YyyBEkwEvZYw70ZYN7pbt5Lx3rS7uWGP0URFVuWa2boSdjHL1sBD_Z3n5bVoiVOg3s=rw-w1230',
+    'https://lh3.googleusercontent.com/UBUETCc8EVM-7oW51JEU5xMEHtrQLXOfHO7copH2Hshg0KNCONshfc2yIMwCSHmU-J9lt7l8pblDC7NhtLp9Lhubv1wSHg4_lZL5=rw-w1230',
     'https://lh3.googleusercontent.com/g0yZeeumvKhaxed-Uw6EMkGQnQs38766KNty4BSX6KVAdm9yFwSAAaITaHCpDJUcGFT_NVdPAJ6BlGs9CwErT1pQZLBV37EBFQ=rw-w1230'
 ];
 var imageIndex = 0;
+var subtext = ['iphone', 'tv', 'tablet'];
 
 function changeImage() {
     image.setAttribute("src", imageArray[imageIndex]);
+    showhide(subtext[imageIndex]);
     imageIndex++;
     if (imageIndex > imageArray.length - 1) {
         imageIndex = 0;
     }
 }
 
-setInterval(changeImage, 5000);
+var interval = setInterval(changeImage, 5000);
 
 // text hovering effect on the image
 var controller = new ScrollMagic.Controller();
 
+
+// text visible and change color when a title is clicked
+var divState = { iphone: false, tv: false, tablet: false };
+
+function showhide(id) {
+    if (document.getElementById) {
+        var divid = document.getElementById(id);
+        divState[id] = true;
+        // close others
+        for (var div in divState) {
+            if (div !== id) {
+                document.getElementById(div).style.display = 'none';
+                document.getElementById(div).parentElement.style.opacity = 0.6;
+                document.getElementById(div).parentElement.parentElement.firstElementChild.classList.remove("section-clicked");
+                document.getElementById(div).parentElement.parentElement.firstElementChild.classList.add("section-not-clicked");
+                divState[div] = false;
+            }
+        }
+        divid.style.display = 'block';
+        divid.parentElement.style.opacity = 1;
+        divid.parentElement.parentElement.firstElementChild.classList.add("section-clicked")
+    }
+}
+
 // text click changes image
-function openImg(index) {}
+function openImg(index) {
+    clearInterval(interval);
+    image.setAttribute("src", imageArray[index]);
+    showhide(subtext[index]);
+    imageIndex = index + 1;
+    if (imageIndex > imageArray.length - 1) {
+        imageIndex = 0;
+    }
+    interval = setInterval(changeImage, 5000);
+}

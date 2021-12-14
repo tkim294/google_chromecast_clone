@@ -20,11 +20,11 @@
             <nav class="main-nav">
                 <h1 class="nav-title">Chromecast</h1>
                 <ul class="main-menu">
-                    <li><a href="#target1" id="target1">Overview</a></li>
-                    <li><a href="#target2" id="target2">Setup & Tips</a></li>
-                    <li><a href="#target3" id="target3">Tech Specs</a></li>
-                    <li><a href="#target4" id="target4">Apps & Partners</a></li>
-                    <li><a href="#target5" id="target5">Compare</a></li>
+                    <li><a class="active" href="#overview" id="overview">Overview</a></li>
+                    <li><a href="#setup" id="setup">Setup & Tips</a></li>
+                    <li><a href="#techspecs" id="techspecs">Tech Specs</a></li>
+                    <li><a href="#app" id="app">Apps & Partners</a></li>
+                    <li><a href="#compare" id="compare">Compare</a></li>
                 </ul>
             </nav>
 
@@ -52,41 +52,61 @@
     </div>
 
     <div class="image-container" class="image-container">
-        <img id="main-image" src='https://lh3.googleusercontent.com/UBUETCc8EVM-7oW51JEU5xMEHtrQLXOfHO7copH2Hshg0KNCONshfc2yIMwCSHmU-J9lt7l8pblDC7NhtLp9Lhubv1wSHg4_lZL5=rw-w1230' />
+        <img id="main-image" src='https://lh3.googleusercontent.com/OYo1qxZwLVn155V6NLcbq69iUGabvSgP5YyyBEkwEvZYw70ZYN7pbt5Lx3rS7uWGP0URFVuWa2boSdjHL1sBD_Z3n5bVoiVOg3s=rw-w1230' />
 
         <div class="text-container">
             <div class="title-text">
                 <span>Stream from your device to your TV. Just like that.</span>
             </div>
             <div class="sub-text-for-change">
-                <div id="image1">
-                    <span>Stream from Android<br>and iPhone®.</span>
-                    <div class="subtitle">
-                        <span>
+                <div class="bar-text-container">
+                    <div class="section-clicked">
+                        <span class="hscroll-line"></span>
+                    </div>
+                    <!-- <div class="progress progress-bar-vertical">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+
+                        </div>
+                    </div> -->
+                    <div class="text-div" id="image1" onclick="openImg(0); showhide('iphone')">
+                        <span>Stream from Android<br>and iPhone®.</span>
+                        <div class="subtitle" id="iphone">
+                            <span>
                             Enjoy thousands of Android or iPhone apps,
                             <sup class="mqn2-ac6">2</sup>
                             <br>and play or pause directly from your &nbsp;phone.
                         </span>
+                        </div>
                     </div>
                 </div>
-                <div id="image2">
-                    <span>Stream from Android<br>and iPhone®.</span>
-                    <div class="subtitle">
-                        <span>
-                            Enjoy thousands of Android or iPhone apps,
-                            <sup class="mqn2-ac6">2</sup>
-                            <br>and play or pause directly from your &nbsp;phone.
+                <div class="bar-text-container">
+                    <div class="section-not-clicked">
+                        <span class="hscroll-line"></span>
+                    </div>
+                    <div class="text-div" id="image2" onclick="openImg(1); showhide('tv')">
+                        <span>See your laptop on your TV.</span>
+                        <div class="subtitle" id="tv" hidden>
+                            <span>
+                            Mirror your laptop screen to your TV with your<br>Chrome browser. 
+                            Surf the web or see your<br>media on the big screen.
+                            <sup class="mqn2-ac6">3</sup>
                         </span>
+                        </div>
                     </div>
                 </div>
-                <div id="image3">
-                    <span>Stream from Android<br>and iPhone®.</span>
-                    <div class="subtitle">
-                        <span>
-                            Enjoy thousands of Android or iPhone apps,
-                            <sup class="mqn2-ac6">2</sup>
-                            <br>and play or pause directly from your &nbsp;phone.
+                <div class="bar-text-container">
+                    <div class="section-not-clicked">
+                        <span class="hscroll-line"></span>
+                    </div>
+                    <div class="text-div" id="image3" onclick="openImg(2); showhide('tablet')">
+                        <span>command your TV from<br>your tablet.</span>
+                        <div class="subtitle" id="tablet" hidden>
+                            <span>
+                            Turn your Android or iOS tablet into an even<br>better entertainment center. 
+                            Just tap the Cast<br>button in any compatible app.
+                            <sup class="mqn2-ac6">4</sup>
                         </span>
+                        </div>
                     </div>
                 </div>
             </div>
