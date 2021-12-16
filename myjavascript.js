@@ -58,10 +58,11 @@ function ensureVideoPlays() {
 
 // Image change timer management
 var image = document.getElementById('main-image');
+
 var imageArray = [
     'https://lh3.googleusercontent.com/OYo1qxZwLVn155V6NLcbq69iUGabvSgP5YyyBEkwEvZYw70ZYN7pbt5Lx3rS7uWGP0URFVuWa2boSdjHL1sBD_Z3n5bVoiVOg3s=rw-w1230',
     'https://lh3.googleusercontent.com/UBUETCc8EVM-7oW51JEU5xMEHtrQLXOfHO7copH2Hshg0KNCONshfc2yIMwCSHmU-J9lt7l8pblDC7NhtLp9Lhubv1wSHg4_lZL5=rw-w1230',
-    'https://lh3.googleusercontent.com/g0yZeeumvKhaxed-Uw6EMkGQnQs38766KNty4BSX6KVAdm9yFwSAAaITaHCpDJUcGFT_NVdPAJ6BlGs9CwErT1pQZLBV37EBFQ=rw-w1230'
+    'https://lh3.googleusercontent.com/g0yZeeumvKhaxed-Uw6EMkGQnQs38766KNty4BSX6KVAdm9yFwSAAaITaHCpDJUcGFT_NVdPAJ6BlGs9CwErT1pQZLBV37EBFQ=rw-w1230',
 ];
 var imageIndex = 0;
 var subtext = ['iphone', 'tv', 'tablet'];
@@ -114,4 +115,61 @@ function openImg(index) {
         imageIndex = 0;
     }
     interval = setInterval(changeImage, 5000);
+}
+
+// Second image changes 
+var image2Array = [
+    'https://lh3.googleusercontent.com/3MvmMkO7vYxFbt3xD07tn1XO586FV4YsBCTXcrnd4-cGBJIJR-CZ4BWNH8ecdY-1l2Eh7en486Jd4P1ROlnpzCIpmViCl6AHXQ=rw-w1320',
+    'https://lh3.googleusercontent.com/94oEqiNO2fuRcM8zV91w3MCBSiuTahGUhjcxbCiwLG31osQij920KaJGR3qO1toPrjdFNAhunzAoYl_LoXyA1bqw3nfau6sktr8=rw-w1320'
+]
+
+var image2 = document.getElementById('main-image2');
+var imageIndex2 = 0;
+var idArray = ['speaking', 'nest'];
+var divState2 = { speaking: false, nest: false };
+
+function changeImage2() {
+    image2.setAttribute("src", image2Array[imageIndex2]);
+    showhide2(idArray[imageIndex2]);
+    imageIndex2++;
+    if (imageIndex2 > image2Array.length - 1) {
+        imageIndex2 = 0;
+    }
+}
+
+var interval2 = setInterval(changeImage2, 5000);
+
+// text click changes image
+function openImg2(index) {
+    clearInterval(interval2);
+    image2.setAttribute("src", image2Array[index]);
+    showhide2(idArray[index]);
+    imageIndex2 = index + 1;
+    if (imageIndex2 > image2Array.length - 1) {
+        imageIndex2 = 0;
+    }
+    interval2 = setInterval(changeImage2, 5000);
+}
+
+// text visible and change color when a title is clicked
+var divState2 = { speaking: false, nest: false };
+
+function showhide2(id) {
+    if (document.getElementById) {
+        var divid = document.getElementById(id);
+        divState2[id] = true;
+        // close others
+        for (var div in divState2) {
+            if (div !== id) {
+                document.getElementById(div).style.display = 'none';
+                document.getElementById(div).parentElement.style.opacity = 0.6;
+                document.getElementById(div).parentElement.parentElement.firstElementChild.classList.remove("section-clicked");
+                document.getElementById(div).parentElement.parentElement.firstElementChild.classList.add("section-not-clicked");
+                divState2[div] = false;
+            }
+        }
+        divid.style.display = 'block';
+        divid.parentElement.style.opacity = 1;
+        divid.parentElement.parentElement.firstElementChild.classList.add("section-clicked")
+    }
 }

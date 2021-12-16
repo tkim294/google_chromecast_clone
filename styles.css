@@ -144,10 +144,22 @@ ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     flex-direction: column;
     background-color: #f8f9fa;
     overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.second-image-text-container {
+    box-sizing: border-box;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    overflow: hidden;
+    height: 90vh;
 }
 
 .image-container img {
@@ -157,8 +169,7 @@ ul li a:hover {
     object-fit: contain;
 }
 
-.video,
-.image {
+.video {
     box-sizing: border-box;
     background-position: center center;
     background-size: cover;
@@ -166,6 +177,8 @@ ul li a:hover {
     height: 100vh;
     object-fit: fill;
 }
+
+.image {}
 
 #myVideo {
     margin: 24px 0;
@@ -178,9 +191,21 @@ ul li a:hover {
     left: 8%;
     z-index: 2;
     width: 33vw;
-    max-width: 500px;
+    max-width: 600px;
     line-height: 3.5vw;
 }
+
+.text-container-2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    flex-direction: column;
+    margin-left: 20%;
+    max-width: 450px;
+}
+
+.center {}
 
 #image2,
 #image3 {
@@ -188,7 +213,7 @@ ul li a:hover {
 }
 
 .title-text {
-    font-size: 2.2vw;
+    font-size: 2.1vw;
     color: #3c4043;
     font-weight: 600;
 }
@@ -196,15 +221,15 @@ ul li a:hover {
 .sub-text-for-change {
     cursor: pointer;
     margin-top: 5%;
-    font-size: 1.53vw;
-    max-width: 500px;
+    font-size: 1.25vw;
+    max-width: 600px;
     font-weight: 600;
     line-height: 3vw;
 }
 
 .subtitle {
     font-weight: normal;
-    font-size: 0.9vw;
+    font-size: 0.76vw;
     animation-name: appear;
     animation-duration: 0.7s;
     opacity: 0.8;
@@ -227,8 +252,8 @@ ul li a:hover {
 .section-not-clicked {
     display: inline-block;
     height: calc(100% - 12px);
-    max-height: 1.6666666667vw;
-    top: 0.3vw;
+    max-height: 1.3vw;
+    top: 0.8vw;
     width: 2px;
     position: absolute;
     left: 0;
@@ -241,8 +266,8 @@ ul li a:hover {
 .section-clicked {
     display: inline-block;
     height: calc(100% - 15px);
-    max-height: 12vw;
-    top: 0.2777777778vw;
+    max-height: 7vw;
+    top: 1vw;
     width: 2px;
     position: absolute;
     left: 0;
@@ -272,7 +297,7 @@ ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    content: ""
+    content: "";
 }
 
 .section-clicked:before {
@@ -305,5 +330,24 @@ ul li a:hover {
     }
     100% {
         transform: translate3d(0, 100%, 0)
+    }
+}
+
+@media (min-width: 768px) {
+    .title-text {
+        width: 38vw;
+        max-width: 500px;
+        /* position: absolute; */
+        min-height: 100%;
+        /* top: 0;
+        left: 0; */
+        z-index: 2;
+    }
+}
+
+@media (min-width: 1230px) {
+    .title-text {
+        width: 100%;
+        max-width: 900px;
     }
 }

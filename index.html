@@ -52,7 +52,7 @@
     </div>
 
     <!-- First Image Container -->
-    <div class="image-container" class="image-container">
+    <div class="image-container">
         <img id="main-image" src='https://lh3.googleusercontent.com/OYo1qxZwLVn155V6NLcbq69iUGabvSgP5YyyBEkwEvZYw70ZYN7pbt5Lx3rS7uWGP0URFVuWa2boSdjHL1sBD_Z3n5bVoiVOg3s=rw-w1230' />
 
         <div class="text-container">
@@ -64,11 +64,6 @@
                     <div class="section-clicked">
                         <span class="hscroll-line"></span>
                     </div>
-                    <!-- <div class="progress progress-bar-vertical">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-
-                        </div>
-                    </div> -->
                     <div class="text-div" id="image1" onclick="openImg(0); showhide('iphone')">
                         <span>Stream from Android and iPhone®.</span>
                         <div class="subtitle" id="iphone">
@@ -100,11 +95,11 @@
                         <span class="hscroll-line"></span>
                     </div>
                     <div class="text-div" id="image3" onclick="openImg(2); showhide('tablet')">
-                        <span>command your TV from<br>your tablet.</span>
+                        <span>command your TV from your tablet.</span>
                         <div class="subtitle" id="tablet" hidden>
                             <span>
-                            Turn your Android or iOS tablet into an even<br>better entertainment center. 
-                            Just tap the Cast<br>button in any compatible app.
+                            Turn your Android or iOS tablet into an even better entertainment center. 
+                            Just tap the Cast button in any compatible app.
                             <sup class="mqn2-ac6">4</sup>
                         </span>
                         </div>
@@ -114,6 +109,53 @@
         </div>
     </div>
 
+    <!-- Second Image Container -->
+    <div class="image-container">
+        <div class="second-image-text-container">
+            <div class="image">
+                <img id="main-image2" src="https://lh3.googleusercontent.com/3MvmMkO7vYxFbt3xD07tn1XO586FV4YsBCTXcrnd4-cGBJIJR-CZ4BWNH8ecdY-1l2Eh7en486Jd4P1ROlnpzCIpmViCl6AHXQ=rw-w1320" />
+            </div>
+            <div class="text-container-2">
+                <div class="title-text center">Put your voice in charge.</div>
+                <div class="sub-text-for-change center">
+                    <div class="bar-text-container">
+                        <div class="section-clicked">
+                            <span class="hscroll-line"></span>
+                        </div>
+                        <div class="text-div" onclick="openImg2(0); showhide2('speaking')">
+                            <div style="line-height: 3vh; margin-bottom: 4px;">
+                                <span>Start streaming by speaking.</span>
+                            </div>
+                            <div class="subtitle" id="speaking">
+                                <span>
+                                Use your voice to stream from compatible apps, mute the volumne, rewind,
+                                and more with Chromecast and Google Home.
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-text-container center">
+                        <div class="section-not-clicked">
+                            <span class="hscroll-line"></span>
+                        </div>
+                        <div class="text-div" onclick="openImg2(1); showhide2('nest')">
+                            <div style="line-height: 3vh; margin-bottom: 4px;">
+                                <span>See your Nest cameras on your TV.</span>
+                            </div>
+                            <div class="subtitle" id="nest" hidden>
+                                <span>
+                                Use your voice to stream from compatible apps, mute the volumne, rewind,
+                                and more with Chromecast and Google Home.
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div></div>
+    </div>
 
 </body>
 <script src="myjavascript.js"></script>
