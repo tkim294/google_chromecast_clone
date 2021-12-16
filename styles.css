@@ -310,6 +310,17 @@ ul li a:hover {
     animation: move 5s;
 }
 
+.speaker-image {
+    width: 85%;
+    position: absolute;
+    left: 0;
+    bottom: -5%;
+}
+
+.circle {
+    box-sizing: border-box;
+}
+
 @keyframes appear {
     0% {
         display: none;
