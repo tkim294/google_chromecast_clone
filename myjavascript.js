@@ -155,6 +155,18 @@ function openImg2(index) {
 var divState2 = { speaking: false, nest: false };
 
 function showhide2(id) {
+
+    // textbox show and hide function
+    if (id === 'speaking') {
+        document.getElementById('speaking-box').style.visibility = 'visible';
+        document.getElementById('nest-box').style.visibility = 'hidden';
+    }
+
+    if (id === 'nest') {
+        document.getElementById('nest-box').style.visibility = 'visible';
+        document.getElementById('speaking-box').style.visibility = 'hidden';
+    }
+
     if (document.getElementById) {
         var divid = document.getElementById(id);
         divState2[id] = true;
