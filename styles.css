@@ -9,10 +9,13 @@ body {
 }
 
 .nav-title {
-    font-size: 24px;
+    display: flex;
+    font-size: 16px;
     color: #423f3f;
     margin: 0;
     font-family: "Google Sans", Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -37,6 +40,9 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+
+/* Main Nav */
 
 .main-nav {
     display: flex;
@@ -65,6 +71,14 @@ body {
     flex-direction: row;
     margin: auto 0;
     padding-right: 36px;
+}
+
+.responsive-button {
+    display: none;
+}
+
+.button-div {
+    display: none;
 }
 
 .price-ship-info {
@@ -433,6 +447,9 @@ ul li a:hover {
     .circle-text {
         top: 62%;
     }
+    .main-menu {
+        margin: 40px 8px;
+    }
 }
 
 @media (min-width: 1144px) {
@@ -473,8 +490,37 @@ ul li a:hover {
     }
 }
 
-@media (max-width:1023px) {
+@media (max-width:1024px) {
     .image-container {
         height: 80vh;
+    }
+    .main-menu {
+        display: none;
+    }
+    .button-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .responsive-button {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        min-width: 64px;
+        /* border: none; */
+        border-radius: 36px;
+        outline: none;
+        overflow: visible;
+        vertical-align: middle;
+        background: transparent;
+        cursor: pointer;
+        border: 1.5px solid #dadce0;
+        min-width: 120px;
+        min-height: 35px;
+        margin-left: 20px;
+        font-size: 16px;
+        box-shadow: 0 1px 4px 0 rgb(5 5 5 / 15%);
     }
 }
