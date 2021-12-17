@@ -1,3 +1,9 @@
+// Refresh browser when resizing the window
+window.onresize = function(e) {
+    e.preventDefault();
+    document.location.reload(true);
+}
+
 // nav menu active 
 var menuItems = $(".main-menu a");
 $(".main-menu a").on('click', function(event) {
@@ -5,6 +11,43 @@ $(".main-menu a").on('click', function(event) {
     menuItems.removeClass('active');
     $(this).addClass('active');
 });
+
+// mobile menu click event
+if($(window).width() < 1025){
+    document.getElementById('main-menu').style.visibility = 'hidden';
+    var active = false;
+    function mobileButtonClicked() {
+        if(!active) {
+            active = true;
+            document.getElementById('mobile-button').classList.add('mobile-active');
+            document.getElementById('main-menu').style.visibility = 'visible';
+        } else {
+            document.getElementById('mobile-button').classList.remove('mobile-active');
+            document.getElementById('main-menu').style.visibility = 'hidden';
+            active = false;
+        }
+    }
+
+    document.getElementById('main-menu').addEventListener("click", function(e) {
+        e.preventDefault();
+        document.getElementById('main-menu').style.visibility = 'hidden';
+        var button_title = e.target.innerText || e.target.textContent;
+        document.getElementById('button-title').innerHTML = button_title;
+        document.getElementById('mobile-button').classList.remove('mobile-active');
+        active = false;
+    })
+    $(function() {  
+        $(document).on("click", function(e) {
+            e.preventDefault();
+            if($(e.target).is('#main-menu, #overview, #setup, #techspecs, #app, #compare, #mobile-button, #button-title, #mobile-div')) {
+                return;
+            }
+            document.getElementById('mobile-button').classList.remove('mobile-active');
+            document.getElementById('main-menu').style.visibility = 'hidden';
+            active = false;
+        })
+    })
+}
 
 // Video autoplay management
 var videoSource = new Array();

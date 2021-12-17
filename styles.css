@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -48,15 +49,18 @@ body {
     display: flex;
     flex-direction: row;
     margin: auto 0;
+    height: 8vh;
 }
 
 .main-menu {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
     margin: auto 8px;
-    height: 100%;
+    height: 0;
     text-align: center;
 }
 
@@ -97,7 +101,7 @@ body {
     line-height: 18px;
 }
 
-.button-div {
+.buy-button-div {
     margin: 5px 0;
     padding-left: 8px;
     border: none;
@@ -121,15 +125,6 @@ body {
 
 ul li a {
     cursor: pointer;
-}
-
-ul li a:hover {
-    background-color: #f8f9fa;
-    border-radius: 40px;
-    text-overflow: ellipsis;
-    min-width: 48px;
-    min-height: 48px;
-    text-align: center;
 }
 
 .active {
@@ -190,7 +185,7 @@ ul li a:hover {
     background-position: center center;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     object-fit: fill;
 }
 
@@ -436,7 +431,7 @@ ul li a:hover {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     .speaker-image {
         bottom: -30%;
     }
@@ -449,6 +444,14 @@ ul li a:hover {
     }
     .main-menu {
         margin: 40px 8px;
+    }
+    ul li a:hover {
+        background-color: #f8f9fa;
+        border-radius: 40px;
+        text-overflow: ellipsis;
+        min-width: 48px;
+        min-height: 48px;
+        text-align: center;
     }
 }
 
@@ -480,9 +483,67 @@ ul li a:hover {
         transform: scale(1.5);
         margin-left: 60px;
     }
+    .video {
+        height: 80vh;
+    }
 }
 
 @media (min-width: 2560px) {}
+
+/* mobile device */
+
+@media  (max-width: 425px) {
+    .main-nav {
+        justify-content: space-between;
+    }
+
+    .main-menu {
+        margin-top: 3%;
+    }
+
+    .menu-container {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .right-menu {
+        justify-content: space-between;
+        padding: 0;
+        position: fixed;
+        bottom: 0;
+        background: #fff;
+        padding: 0 24px;
+        margin-left: -5.7%;
+        width: 100%;
+        z-index: 91;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .price-ship-info {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .mobile-div {
+        margin-right: 0;
+    }
+    
+}
+
+@media (max-width: 375px) {
+    .right-menu {
+        margin-left: -6.5%;
+    }
+}
+
+@media (max-width: 320px) {
+    .right-menu {
+        margin-left: -7.5%;
+    }
+}
 
 @media (max-width: 767px) {
     .speaker-image {
@@ -501,7 +562,10 @@ ul li a:hover {
         display: flex;
         align-items: center;
         justify-content: center;
+        -webkit-tap-highlight-color: transparent;
+        margin-top: 12%;
     }
+
     .responsive-button {
         position: relative;
         display: inline-flex;
@@ -518,9 +582,65 @@ ul li a:hover {
         cursor: pointer;
         border: 1.5px solid #dadce0;
         min-width: 120px;
-        min-height: 35px;
+        min-height: 30px;
         margin-left: 20px;
         font-size: 16px;
         box-shadow: 0 1px 4px 0 rgb(5 5 5 / 15%);
     }
+
+    .mobile-active {
+        background-color: #d2e3fc;
+        color: #174ea6;
+        border: 1.5px solid #174ea6;
+        box-shadow: none;
+    }
+
+    .mobile-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0;
+        margin-left: 2%;
+        opacity: 1;
+        font-family: Roboto, Arial, sans-serif;
+        line-height: 1.5rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.00625em;
+        font-weight: 400;
+        box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%);
+        position: absolute;
+        top: 7vh;
+        height: 27vh;
+        background-color: #fff;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .main-menu li {
+        width: 100%;
+        height: 80%;
+        display: flex;
+    }
+
+    .main-menu li #overview {
+        margin-top: 5px;
+    }
+
+    .active {
+        display: flex;
+        z-index: 0;
+        color: #423f3f;
+        font-weight: normal;
+        background-color: #e7eaec;
+        height: 100%;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
 }

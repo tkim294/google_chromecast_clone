@@ -21,18 +21,23 @@
                 <div class="nav-title">
                     <h1>Chromecast</h1>
                 </div>
-                <div class="button-div">
-                    <button class="responsive-button">
-                        <span>Overview</span>
-                    </button>
+
+                <div id="mobile-div" class="mobile-div">
+                    <div class="button-div ">
+                        <button id="mobile-button" class="responsive-button" onclick="mobileButtonClicked()">
+                            <span id="button-title">Overview</span>
+                            <span style="padding-left: 7px; color: rgb(95, 99, 104); transform: scale(1, 0.5);">&#9660;</span>
+                        </button>
+                    </div>
+
+                    <ul id="main-menu" class="main-menu">
+                        <li><a class="active" href="#overview" id="overview">Overview</a></li>
+                        <li><a href="#setup" id="setup">Setup & Tips</a></li>
+                        <li><a href="#techspecs" id="techspecs">Tech Specs</a></li>
+                        <li><a href="#app" id="app">Apps & Partners</a></li>
+                        <li><a href="#compare" id="compare">Compare</a></li>
+                    </ul>
                 </div>
-                <ul class="main-menu">
-                    <li><a class="active" href="#overview" id="overview">Overview</a></li>
-                    <li><a href="#setup" id="setup">Setup & Tips</a></li>
-                    <li><a href="#techspecs" id="techspecs">Tech Specs</a></li>
-                    <li><a href="#app" id="app">Apps & Partners</a></li>
-                    <li><a href="#compare" id="compare">Compare</a></li>
-                </ul>
             </nav>
 
             <div class="right-menu">
@@ -40,7 +45,7 @@
                     <span class="price-tag"> $29.99 </span>
                     <div class="ship-text">Free Shipping <sup>†</sup></div>
                 </div>
-                <div class="button-div">
+                <div class="buy-button-div">
                     <button class="button">Buy</button>
                 </div>
             </div>
