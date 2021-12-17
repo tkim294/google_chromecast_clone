@@ -269,7 +269,7 @@ ul li a {
 
 .subtitle {
     font-weight: normal;
-    font-size: 0.76vw;
+    font-size: 1.2vw;
     animation-name: appear;
     animation-duration: 0.7s;
     opacity: 0.8;
@@ -307,7 +307,7 @@ ul li a {
 .section-clicked {
     display: inline-block;
     height: calc(100% - 15px);
-    max-height: 7vw;
+    max-height: 6vw;
     top: 1vw;
     width: 2px;
     position: absolute;
@@ -410,6 +410,7 @@ ul li a {
         left: 0; */
         z-index: 2;
     }
+
     .circle {
         display: block;
         width: 5.208vw;
@@ -427,7 +428,7 @@ ul li a {
         top: 65%;
     }
     .speaker-image {
-        top: 45%;
+        top: 65%;
     }
 }
 
@@ -478,13 +479,19 @@ ul li a {
 }
 
 @media (min-width: 1440px) {
+    .circle {
+        top: 67%;
+    }
     .circle-text {
-        top: 69%;
+        top: 65%;
         transform: scale(1.5);
         margin-left: 60px;
     }
     .video {
         height: 80vh;
+    }
+    .speaker-image {
+        top: 45%
     }
 }
 
@@ -551,7 +558,29 @@ ul li a {
     }
 }
 
+@media (max-width: 768px) {
+    .title-text {
+        font-size: 2.5vw;
+    }
+
+    .text-div {
+        font-size: 2vw;
+    }
+
+    .subtitle {
+        font-size: 1.4vw;
+        line-height: 1.5rem;
+    }
+
+    .section-clicked {
+        max-height: 9vh;
+    }
+}
+
 @media (max-width:1024px) {
+    .circle {
+        top: 67%;
+    }
     .image-container {
         height: 80vh;
     }
