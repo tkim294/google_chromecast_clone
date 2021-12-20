@@ -1,0 +1,83 @@
+/* Section Page 1 */
+* {
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Google Sans", "Roboto", "Arial", sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.mobile-image-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  color: #3c4043;
+}
+
+.mobile-subimage-container {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: opacity 0.3s ease-in;
+}
+
+.mobile-title-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 2.1vw;
+  color: #3c4043;
+  font-weight: 600;
+  padding: 30px;
+  padding-top: 60px;
+}
+
+.mobile-title {
+  display: inline-block;
+  line-height: 26px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.mobile-text-div {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  line-height: 25px;
+  font-size: 15px;
+  margin-bottom: 3.4vw;
+  padding-left: 2.083vw;
+  z-index: 1;
+  cursor: pointer;
+  padding: 30px;
+}
+
+.mobile-subtitle {
+  font-weight: normal;
+  display: inline-block;
+  line-height: 22px;
+  font-size: 14px;
+  animation-name: appear;
+  animation-duration: 0.7s;
+  opacity: 0.8;
+  max-width: 380px;
+  line-height: 1.5vw;
+  color: #3c4043 !important;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
