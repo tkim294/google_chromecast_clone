@@ -290,7 +290,7 @@ function showhide2(id) {
   }
 }
 
-// Mobile responsive dot button select (Changing images and text) - First Page
+/* Mobile responsive dot button select (Changing images and text) - First Page */
 var mobileImageArray = [
   "https://lh3.googleusercontent.com/FZq4DD848ycViiLlUa6c9zlAQ9ToTcMXnC3699scqzXjv0A-qts7LLBeJdk1Qz7EbHm_LX452DGtjH7lc2rzG3fGOkY0u_iByB2L=rw-w1280",
   "https://lh3.googleusercontent.com/2_CQMQfABwT8rSZbLU-0zt2PgxQ44G_hzyInIzQyOT-t8iM7MGwvo8-vsZ0Uyoa0LsVAyMAxnSMqH-EWprMl7nSplra9k8MPaw=rw-w1280",
@@ -332,7 +332,38 @@ function removeClass() {
   }
 }
 
-// Mobile responsive dot button select (Changing images and text) - Second Page
+/* Add swipe function to mobile first page */
+$(document).ready(function () {
+  $("#mobile-main-image").on("swiperight", function (e) {
+    e.preventDefault();
+    var activeDotIndex = findActiveDot();
+    if (activeDotIndex === 0) {
+      return;
+    }
+    clickDots(activeDotIndex - 1);
+  });
+});
+
+$(document).ready(function () {
+  $("#mobile-main-image").on("swipeleft", function (e) {
+    e.preventDefault();
+    var activeDotIndex = findActiveDot();
+    if (activeDotIndex === 2) {
+      return;
+    }
+    clickDots(activeDotIndex + 1);
+  });
+});
+
+function findActiveDot() {
+  for (var i = 1; i <= 3; i++) {
+    if ($("#dot" + i).hasClass("dot-active")) {
+      return i - 1;
+    }
+  }
+}
+
+/* Mobile responsive dot button select (Changing images and text) - Second Page */
 var mobileImageArray2 = [
   "https://lh3.googleusercontent.com/sFaGxBwGRkSsu6LorvuMTQbLHwU0hw_LO-bE2fE93G9DtLIH18i_G2Ai7hSK0L4u0dnePN4_UuQUmGMJdxx87OOfnq0WB12kVYPu=rw-w1280",
   "https://lh3.googleusercontent.com/MkTNJg1j018fbqMmm-oEH3qA-1mItFHer-S-5VAvRYDPWYrKOKXnGN1LVlhwlB3VnFd8Lz2MQe_fkg0txZ3Zw1nrk9zjT2ewbZ8=rw-w1280",
@@ -362,7 +393,7 @@ function clickDots2(index) {
   // Remove all active class
   removeClass2();
 
-  document.getElementById("dot" + (index + 3)).classList.add("dot-active");
+  document.getElementById("dot" + (index + 4)).classList.add("dot-active");
 }
 
 function removeClass2() {
@@ -370,3 +401,47 @@ function removeClass2() {
     elements2[i].classList.remove("dot-active");
   }
 }
+
+/* Add swipe function to mobile second page */
+
+$(document).ready(function () {
+  $("#mobile-main-image2").on("swiperight", function (e) {
+    e.preventDefault();
+    var activeDotIndex = 0;
+
+    for (var i = 1; i <= 2; i++) {
+      if ($("#dot" + (i + 3)).hasClass("dot-active")) {
+        activeDotIndex = i - 1;
+        break;
+      }
+    }
+
+    if (activeDotIndex === 0) {
+      return;
+    }
+
+    clickDots2(activeDotIndex - 1);
+  });
+});
+
+$(document).ready(function () {
+  $("#mobile-main-image2").on("swipeleft", function (e) {
+    e.preventDefault();
+    var activeDotIndex = 0;
+
+    for (var i = 1; i <= 2; i++) {
+      if ($("#dot" + (i + 3)).hasClass("dot-active")) {
+        activeDotIndex = i - 1;
+        break;
+      }
+    }
+
+    if (activeDotIndex === 1) {
+      return;
+    }
+
+    clickDots2(activeDotIndex + 1);
+  });
+});
+
+/* netflix video pin */

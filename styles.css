@@ -144,6 +144,24 @@ ul li a {
   background-color: #f8f9fa;
   overflow: hidden;
   margin-top: 68px;
+  height: 100%;
+}
+
+.netflix-video-container {
+  position: relative;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.netflix-text-container {
+  position: absolute;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  font-family: "Google Sans", Arial, sans-serif;
 }
 
 .mobile-image-container {
@@ -462,6 +480,11 @@ ul li a {
     -o-transform: none;
     transform: none;
   }
+
+  .netflix-text-container {
+    font-size: 2.34375vw;
+    font-weight: 500;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -509,6 +532,10 @@ ul li a {
   }
   .circle-text {
   }
+
+  .netflix-text-container {
+    font-size: 38px;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -521,7 +548,7 @@ ul li a {
     margin-left: 60px;
   }
   .video {
-    height: 80vh;
+    height: 50vh;
   }
   .speaker-image {
     top: 37%;
