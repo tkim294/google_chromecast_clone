@@ -4,8 +4,6 @@ window.onresize = function (e) {
   document.location.reload(true);
 };
 
-// Check if the screen size is less than tablet
-
 // nav menu active
 var menuItems = $(".main-menu a");
 $(".main-menu a").on("click", function (event) {
@@ -272,12 +270,12 @@ function showhide2(id) {
         document
           .getElementById(div)
           .parentElement.parentElement.firstElementChild.classList.remove(
-            "section-clicked"
+            "section-clicked2"
           );
         document
           .getElementById(div)
           .parentElement.parentElement.firstElementChild.classList.add(
-            "section-not-clicked"
+            "section-not-clicked2"
           );
         divState2[div] = false;
       }
@@ -285,7 +283,7 @@ function showhide2(id) {
     divid.style.display = "block";
     divid.parentElement.style.opacity = 1;
     divid.parentElement.parentElement.firstElementChild.classList.add(
-      "section-clicked"
+      "section-clicked2"
     );
   }
 }
@@ -445,3 +443,13 @@ $(document).ready(function () {
 });
 
 /* netflix video pin */
+gsap.registerPlugin(ScrollTrigger);
+
+/* Text scrolling move up effect */
+// gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".netflix-video-div",
+//     start: "top top",
+//     scrub: 1,
+//   }
+// }).to("netflix-text-container", {y: 200, duration: 6});

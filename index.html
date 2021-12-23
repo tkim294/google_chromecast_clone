@@ -4,19 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
     <title>Chromecast Clone</title>
   </head>
 
   <body>
     <!-- Header -->
-    <div class="container container-fixed">
+    <div data-role="none">
+    <div class="container container-fixed" data-role="none">
       <div class="menu-container">
         <!-- Navigation bar -->
         <nav class="main-nav">
@@ -71,7 +73,7 @@
 
     <!-- Main Body -->
     <div class="video-container">
-      <div id="trigger">
+      <div id="trigger" class="chromecast-video-container">
         <video class="video" id="video1" autoplay muted>
           <!-- add muted for autoplay started -->
           <source
@@ -88,8 +90,7 @@
             <sup><small>2</small></sup>
           </span>
         </div>
-        <video class="video" id="myVideo" autoplay muted>
-          <!-- add muted for autoplay started -->
+        <video class="netflix-video" id="myVideo" autoplay muted>
           Your browser does not support the video tag.
         </video>
       </div>
@@ -281,14 +282,14 @@
           <div class="title-text center digit">Put your voice in charge.</div>
           <div class="sub-text-for-change center">
             <div class="bar-text-container digit">
-              <div class="section-clicked">
+              <div class="section-clicked2">
                 <span class="hscroll-line"></span>
               </div>
               <div
                 class="text-div"
                 onclick="openImg2(0); showhide2('speaking')"
               >
-                <div style="line-height: 1.5vh; margin-bottom: 4px">
+                <div style="line-height: 3vh; margin-bottom: 4px">
                   <span>Start streaming by speaking.</span>
                 </div>
                 <div class="subtitle" id="speaking">
@@ -301,7 +302,7 @@
               </div>
             </div>
             <div class="bar-text-container center digit">
-              <div class="section-not-clicked">
+              <div class="section-not-clicked2">
                 <span class="hscroll-line"></span>
               </div>
               <div class="text-div" onclick="openImg2(1); showhide2('nest')">
@@ -328,6 +329,7 @@
         />
       </div>
     </div>
+  </div>
   </body>
   <script src="myjavascript.js"></script>
 </html>
