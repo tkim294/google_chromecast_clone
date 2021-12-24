@@ -10,16 +10,87 @@
 <body>
 
     <div id="netflix-video-div" class="netflix-video-container">
-        <div id="netflix-text-div" class="netflix-text-container">
+        <!-- <div id="netflix-text-div" class="netflix-text-container">
           <span style='font-family: "Google Sans","Roboto","Arial",sans-serif; font-weight: 600;'>
             Chromecast works with the apps you love.
             <sup><small>2</small></sup>
           </span>
+        </div> -->
+        <div class="videos-div">
+          <div class="frame-video-div">
+            <img class="frame-image" src="https://lh3.googleusercontent.com/KMHq-9FCfRBLDeyutsR8D0104SnD_Dq7UzzYyF9l6JBzJX_oiaz3DAEhDETkcSUhBatX4qazp0J5N_VsEEtD=rw-w800" />
+            <video id="shrinked-video" class="shrinked-video" autoplay muted></video>
+          </div>
+          
+          <video class="netflix-video" id="myVideo" autoplay muted>
+            Your browser does not support the video tag.
+          </video>
+
+          <div class="button-div">
+
+            <div class="circle-wrap">
+              <div class="circle">
+                <div class="mask half">
+                  <div id="netflix-progress1" class="fill"></div>
+                </div>
+                <div id="netflix-progress2"  class="mask full">
+                  <div id="netflix-progress3" class="fill"></div>
+               </div>
+               <div id="netflix-button" class="circle-button" style="background-image: url('https://lh3.googleusercontent.com/lBHpBcXDju-Nscc1rwziy7wal7rhuHMNw24UkxlRWpnYxe_UD5k2OcqpTHA7ifiti2d9OserHfvcZvbfP_llOJQ=rw-w120');"></div>
+              </div>
+            </div>
+
+            <div class="circle-wrap">
+              <div class="circle">
+                <div class="mask half">
+                  <div id="youtube-progress1" class="fill"></div>
+                </div>
+                <div id="youtube-progress2" class="mask full">
+                  <div id="youtube-progress3" class="fill"></div>
+               </div>
+               <div id="youtube-button" class="circle-button" style="background-image: url('https://lh3.googleusercontent.com/JKHWeS0rfNANlwZ_7_mAvyeiKMIvlvxO7PXdqNwGurLEYnCxhd_C4xBh0PV71B05InIB4TdbN0wlSyjKpcTfrA=rw-w120');"></div>
+              </div>
+            </div>
+
+            <div class="circle-wrap">
+              <div class="circle">
+                <div class="mask half">
+                  <div id="google-progress1" class="fill"></div>
+                </div>
+                <div id="google-progress2" class="mask full">
+                  <div id="google-progress3" class="fill"></div>
+               </div>
+               <div id="google-button" class="circle-button" style="background-image: url('https://lh3.googleusercontent.com/Fc_C3lEe5OZfpTioHY9j0v8BE0DL-eADqmJ6dAs49yI5gwB6_ykxtWV3PM-sXn843PhewO5uIL4u7lfeenr4=rw-w120');"></div>
+              </div>
+            </div>
+
+            <div class="circle-wrap">
+              <div class="circle">
+                <div class="mask half">
+                  <div id="hbo-progress1" class="fill"></div>
+                </div>
+                <div id="hbo-progress2" class="mask full">
+                  <div id="hbo-progress3" class="fill"></div>
+               </div>
+               <div id="hbo-button" class="circle-button" style="background-image: url('https://lh3.googleusercontent.com/6OjIgyZuRnRxxc_bCKtmSeuPoRSWCP4tbd6OWfBVmBnvm1PFmwZGqHuUAOj7JJ6yoq19xNgBXWUloJN0iumdYQ=rw-w120');"></div>
+              </div>
+            </div>
+
+            <div class="circle-wrap">
+              <div class="circle">
+                <div class="mask half">
+                  <div id="hulu-progress1" class="fill"></div>
+                </div>
+                <div id="hulu-progress2" class="mask full">
+                  <div id="hulu-progress3" class="fill"></div>
+               </div>
+               <div id="hulu-button" class="circle-button" style="background-image: url('https://lh3.googleusercontent.com/pFJdDZWXPwWwymyJMXlsdePjvZocKC9NvdkEMA5eTn0X3y54I4JnvjSFqS-ekjFtkcKTcBscNosei8sqbrNI=rw-w120');"></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <video class="netflix-video" id="myVideo" autoplay muted>
-          Your browser does not support the video tag.
-        </video>
       </div>
     
+      <script src="myscript.js"></script>
 </body>
 </html>
